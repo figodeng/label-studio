@@ -50,7 +50,7 @@ const ProjectName = ({ name, setName, onSaveName, onSubmit, error, description, 
           treatment: "simplify_project_management",
         })} target="_blank">Learn more</a>
         </Caption>
-        <HeidiTips collection="projectCreation" />
+        {/* <HeidiTips collection="projectCreation" /> */}
       </div>
     )}
   </form>

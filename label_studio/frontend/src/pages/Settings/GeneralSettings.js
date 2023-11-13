@@ -56,7 +56,7 @@ export const GeneralSettings = () => {
               labelProps={{ large: true }}
               style={{ minHeight: 128 }}
             />
-            {isFF(FF_LSDV_E_297) && (
+            {/* {isFF(FF_LSDV_E_297) && (
               <Block name="workspace-placeholder">
                 <Elem name="badge-wrapper">
                   <Elem name="title">Workspace</Elem>
@@ -70,7 +70,7 @@ export const GeneralSettings = () => {
                 })}>Learn more</a>
                 </Caption>
               </Block>
-            )}
+            )} */}
             <RadioGroup name="color" label="Color" size="large" labelProps={{ size: "large" }}>
               {colors.map(color => (
                 <RadioGroup.Button key={color} value={color}>
@@ -79,7 +79,7 @@ export const GeneralSettings = () => {
               ))}
             </RadioGroup>
 
-            <RadioGroup label="Task Sampling" labelProps={{ size: "large" }} name="sampling" simple>
+            {/* <RadioGroup label="Task Sampling" labelProps={{ size: "large" }} name="sampling" simple>
               {samplings.map(({ value, label, description }) => (
                 <RadioGroup.Button
                   key={value}
@@ -104,7 +104,7 @@ export const GeneralSettings = () => {
                   )}
                 />
               )}
-            </RadioGroup>
+            </RadioGroup> */}
           </Form.Row>
 
           <Form.Actions>
@@ -115,9 +115,9 @@ export const GeneralSettings = () => {
           </Form.Actions>
         </Form>
       </Elem>
-      {isFF(FF_LSDV_E_297) && (
+      {/* {isFF(FF_LSDV_E_297) && (
         <HeidiTips collection="projectSettings" />
-      )}
+      )} */}
     </Block>
   );
 };

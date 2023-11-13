@@ -674,3 +674,7 @@ PUBLIC_API_DOCS = get_bool_env('PUBLIC_API_DOCS', False)
 DATA_MANAGER_FILTER_ALLOWLIST = list(
     set(get_env_list('DATA_MANAGER_FILTER_ALLOWLIST') + ['updated_by__active_organization'])
 )
+
+DEFAULT_USER_NAME = os.getenv('DEFAULT_USER_NAME')
+DEFAULT_USER_PASSWORD = os.getenv('DEFAULT_USER_PASSWORD')
+

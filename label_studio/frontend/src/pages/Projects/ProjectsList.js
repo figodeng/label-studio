@@ -35,7 +35,7 @@ export const EmptyProjectsList = ({ openModal }) => {
   return (
     <Block name="empty-projects-page">
       <Elem name="heidi" tag="img" src={absoluteURL("/static/images/opossum_looking.png")} />
-      <Elem name="header" tag="h1">Heidi doesn’t see any projects here</Elem>
+      <Elem name="header" tag="h1">doesn’t see any projects here</Elem>
       <p>Create one and start labeling your data</p>
       <Elem name="action" tag={Button} onClick={openModal} look="primary">Create Project</Elem>
     </Block>
@@ -70,7 +70,7 @@ const ProjectCard = ({ project }) => {
               <Dropdown.Trigger content={(
                 <Menu>
                   <Menu.Item href={`/projects/${project.id}/settings`}>Settings</Menu.Item>
-                  <Menu.Item href={`/projects/${project.id}/data?labeling=1`}>Label</Menu.Item>
+                  <Menu.Item href={`/projects/${project.id}/data`}>Label</Menu.Item>
                 </Menu>
               )}>
                 <Button size="small" type="text" icon={<LsEllipsis/>}/>
@@ -106,9 +106,9 @@ const ProjectCard = ({ project }) => {
           <Elem name="created-date">
             {format(new Date(project.created_at), "dd MMM ’yy, HH:mm")}
           </Elem>
-          <Elem name="created-by">
+          {/* <Elem name="created-by">
             <Userpic src="#" user={project.created_by} showUsername/>
-          </Elem>
+          </Elem> */}
         </Elem>
       </Block>
     </Elem>

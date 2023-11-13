@@ -117,7 +117,7 @@ export const Menubar = ({
     <div className={contentClass}>
       {enabled && (
         <div className={menubarClass}>
-          <Dropdown.Trigger
+          {/* <Dropdown.Trigger
             dropdown={menuDropdownRef}
             closeOnClickOutside={!sidebarPinned}
           >
@@ -125,7 +125,7 @@ export const Menubar = ({
               <img src={absoluteURL("/static/icons/logo-black.svg")} alt="Label Studio Logo" height="22"/>
               <Hamburger opened={sidebarOpened}/>
             </div>
-          </Dropdown.Trigger>
+          </Dropdown.Trigger> */}
 
           <div className={menubarContext}>
             <LeftContextMenu className={contextItem.mod({left: true})}/>
@@ -133,7 +133,7 @@ export const Menubar = ({
             <RightContextMenu className={contextItem.mod({right: true})}/>
           </div>
 
-          <Dropdown.Trigger ref={useMenuRef} align="right" content={(
+          {/* <Dropdown.Trigger ref={useMenuRef} align="right" content={(
             <Menu>
               <Menu.Item
                 icon={<LsSettings/>}
@@ -141,7 +141,7 @@ export const Menubar = ({
                 href="/user/account"
                 data-external
               />
-              {/* <Menu.Item label="Dark Mode"/> */}
+              <Menu.Item label="Dark Mode"/> 
               <Menu.Item
                 icon={<LsDoor/>}
                 label="Log Out"
@@ -169,7 +169,7 @@ export const Menubar = ({
                 <div className={menubarClass.elem('userpic-badge')} />
               )}
             </div>
-          </Dropdown.Trigger>
+          </Dropdown.Trigger> */}
         </div>
       )}
 
