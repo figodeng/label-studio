@@ -38,21 +38,22 @@ Run Label Studio in a Docker container and access it at `http://localhost:8080`.
 
 
 ```bash
-docker pull heartexlabs/label-studio:latest
-docker run -it -p 8080:8080 -v $(pwd)/mydata:/label-studio/data heartexlabs/label-studio:latest
+docker pull hkpc/label-studio:latest
+docker run -it -p 8080:8080 -v $(pwd)/mydata:/label-studio/data  hkpc/label-studio:latest
 ```
 You can find all the generated assets, including SQLite3 database storage `label_studio.sqlite3` and uploaded files, in the `./mydata` directory.
 
 #### Override default Docker install
 You can override the default launch command by appending the new arguments:
 ```bash
-docker run -it -p 8080:8080 -v $(pwd)/mydata:/label-studio/data heartexlabs/label-studio:latest label-studio --log-level DEBUG
+docker run -it -p 8080:8080 -v $(pwd)/mydata:/label-studio/data hkpc/label-studio:latest label-studio --log-level DEBUG
 ```
 
 #### Build a local image with Docker
 If you want to build a local image, run:
 ```bash
-docker build -t heartexlabs/label-studio:latest .
+docker build -t hkpc/label-studio:latest .
+docker run -it -p 8080:8080 -v $(pwd)/mydata:/label-studio/data -e DEFAULT_USER_NAME=test@qq.com -e DEFAULT_USER_PASSWORD=88888888 hkpc/label-studio:latest
 ```
 
 ### Run with Docker Compose
